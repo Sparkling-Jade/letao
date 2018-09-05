@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索中心</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+
+    <link rel="stylesheet/less" href="lib/less/search.less">
+
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <header id="header">
+        <a href="index.html" class="icon_back fa fa-arrow-left">
+        </a>
+        <h4>搜索中心</h4>
+    </header>
+
+    <!-- 主体部分 -->
+    <main id="main">
+        <div class="search-form">
+            <input type="text" class="input-search" placeholder="请输入搜索内容">
+            <button class="btn-search">搜索</button>
+        </div>
+
+        <div class="search-history">
+            <div class="title mui-clearfix">
+                <span class="mui-pull-left">搜索记录</span>
+                <a href="#" class="mui-pull-right btn-clear"><i class="fa fa-trash"></i>清空记录</a>
+            </div>
+
+            <div class="content">
+                <ul>
+                  
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html" class="active">
+                    <i class="fa fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="classiFication.html">
+                    <i class="fa fa-bars"></i>
+                    <span>分类</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="car.html">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>购物车</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="user.html">
+                    <i class="fa fa-user"></i>
+                    <span>会员中心</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script id="historyTmp" type="text/html">
+     {{if rows.length>0}}
+        {{each rows value i}}
+        <li>
+          <a href="#"><span>{{value.search}}</span></a>
+          <i class="fa fa-close btn-delete" data-id="{{value.id}}"></i>
+        </li>
+         {{/each}}
+     {{else}}
+        <li><p>没有搜索记录</p></li>
+        {{/if}}
+    
+    </script>
+
+
+    <script src="lib/mui/js/mui.js"></script>
+
+    <script src="lib/zepto/zepto.min.js"></script>
+
+    <script src="lib/artTemplate/template-web.js"></script>
+
+    <script src="js/search.js"></script>
+</body>
+
+</html>

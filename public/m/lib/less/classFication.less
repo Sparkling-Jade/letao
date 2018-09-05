@@ -1,0 +1,45 @@
+@import "base.less";
+#main {
+    display: flex;
+    background-color: #CCC;
+    .category-left {
+        padding-right: 10px;
+        >ul {
+            li {
+                &.active {
+                    a{
+                        background-color: #ccc;
+                    }
+                }
+                a {
+                    display: block;
+                    width: 80px;
+                    height: 45px;
+                    line-height: 45px;
+                    text-align: center;
+                    font-size: 14px;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    .category-right {
+        flex: 1;
+        position: relative;
+        .mui-scroll{
+            min-height: 101%;
+        }
+        .mui-row {
+        padding-top: 10px;
+            div {
+                background-color: #fff;
+                a {
+                    text-align: center;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
